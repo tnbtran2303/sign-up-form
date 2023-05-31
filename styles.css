@@ -1,0 +1,206 @@
+:root {
+    --blue: hsl(248, 32%, 49%);
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(/images/bg-intro-mobile.png);
+    background-color: var(--red);
+    padding: 8.8rem 2.4rem;
+    min-height: 100vh;
+    display: grid;
+    max-width: 58.5rem;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 3.6rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2.4rem;
+}
+
+header p {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 6.4rem;
+}
+
+main div.info{
+    background: var(--blue);
+    padding: 1.8rem 7.2rem;
+    border-radius: 1rem;
+    margin-bottom: 2.4rem;
+    box-shadow: 0 8px 5px rgba(62,60,783,0.55);
+}
+
+main div.info span{
+    display: block;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+main div.info span b{
+    font-weight: 600;
+}
+
+main form {
+    background: #fff;
+    padding: 2.4rem;
+    border-radius: 1rem;
+}
+
+main form div{
+    position: relative;
+    margin-bottom: 1.8rem;
+}
+main form div input{
+   width: 100%;
+   height: 5.4rem;
+   padding: 0 1.6rem;
+   outline: none;
+   border: 1px solid var(--grayish-blue);
+   border-radius: 0.5rem;
+   font-weight: 600;
+   font-size: 1.4rem;
+   line-height: 2.1rem;
+   letter-spacing: 0.015em;
+   color: var(--dark-blue);
+}
+
+main form div input::placeholder{
+    color: var(--grayish-blue);
+}
+
+main form div input:focus{
+    border-color: var(--dark-blue);
+}
+
+main form div img {
+    position: absolute;
+    top: 23%;
+    right: 1.6rem;
+    display: none;
+}
+
+main form div span.alert {
+    display: none;
+    text-align: right;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color: var(--red);
+    padding-top: 0.6rem;
+}
+
+main form button {
+    width: 100%;
+    height: 5.6rem;
+    background-color: var(--green);
+    border: 0;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.055rem;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 0.8rem;
+    box-shadow: inset 0px 1px 3px rgb(62 60 73 / 21%), inset 0px -3px 5px rgb(62 60 73 / 21%);
+    transition: all 0.3s ease-in-out;
+}
+
+main form button:hover {
+    background: hsla(154,59%,51%, 80%);
+}
+
+main div .terms {
+    color: var(--grayish-blue);
+    padding: 0 1.6rem;
+    margin: 0 ;
+}
+
+main div.terms span {
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 2.1rem;
+}
+
+main div.terms span strong {
+    font-weight: 600;
+    color: var(--red)
+}
+
+.block {
+    display: block !important;
+}
+
+.errInput {
+    border-color: var(--red);
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        background-image: url(/images/bg-intro-desktop.png);
+        max-width: 100%;
+        padding: 12.1rem 16.5rem 0;
+        grid-template-columns: 51rem 54rem;
+        grid-template-rows: max-content;
+        gap: 6rem;
+    }
+
+    header {
+        display: grid;
+        place-content: center;
+    }
+    header h1 {
+        font-size: 5rem;
+        line-height: 5.5rem;
+        text-align: left;
+        margin-bottom: 2.8rem;
+        letter-spacing: -0.01rem;
+    }
+    header p {
+        text-align: left;
+        margin: 0;
+    }
+    main form {
+        padding: 4rem;
+    }
+    main form div {
+        margin-bottom: 2rem;
+    }
+    main form div input {
+        height: 5.6rem;
+        padding: 0 3.2rem;
+    }
+
+    main form button {
+        margin-bottom: 1.4rem;
+    }
+}
